@@ -1,4 +1,6 @@
+
 import Notiflix from 'notiflix';
+import axios from "axios";
 import { searchImages } from './api.js';
 
 const searchForm = document.querySelector('#search-form');
@@ -76,7 +78,7 @@ async function searchImagesByQuery(query) {
     }
     
     displayImages(hits);
-    searchForm.style.display = "none";
+    
 
     if (hits.length < totalHits) {
       loadMoreButton.style.display = 'block';
